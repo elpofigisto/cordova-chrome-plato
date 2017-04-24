@@ -10,6 +10,19 @@ rfduino.discover = function (seconds, successCallback, failureCallback) {
 	return devices;
 };
 
+rfduino.connect = function (result) {
+	var promise = new Promise(function(resolve, reject) {
+		if (result) {
+			resolve(true);
+		}
+		else {
+			reject(Error(false));
+		}
+	});
+
+	return promise
+};
+
 rfduino.isEnabled = function (result) {
 	var promise = new Promise(function(resolve, reject) {
 		if (result) {
