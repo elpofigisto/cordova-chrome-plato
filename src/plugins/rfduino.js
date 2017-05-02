@@ -53,4 +53,28 @@ rfduino.checkBattery = function (result) {
     return (Math.random(1, 100)*100).toFixed(0);
 };
 
+rfduino.onData = function () {
+    var resArr = [
+        true,
+        false,
+        12,
+        "f3",
+        "pz",
+        +new Date(),
+        +new Date(),
+        Math.random(0,10)*10,
+        Math.random(0,10)*10
+    ];
+
+    var res = resArr.join(',');
+
+    var promise = new Promise(function(resolve) {
+        resolve(res);
+
+    });
+
+    return promise;
+};
+
+
 window.rfduino = rfduino;
