@@ -1,6 +1,4 @@
+dist/
+package/
 node_modules/
 .idea/
-dist/
-dist
-package/
-package

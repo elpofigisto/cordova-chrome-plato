@@ -1,6 +1,9 @@
 /****************************************************************
  * Flashlight
  */
+if (!window.plugins) {
+    window.plugins = {};
+}
 
 function Flashlight() {
     this._isSwitchedOn = false;
@@ -31,6 +34,6 @@ Flashlight.prototype = {
     }
 };
 
-window.plugins.flashlight = new Flashlight();
+window.plugins.flashlight = Flashlight;
 
 

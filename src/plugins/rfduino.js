@@ -2,6 +2,10 @@
  * rfduino
  */
 
+if (!window.plugins) {
+    window.plugins = {};
+}
+
 var rfduino = {};
 
 rfduino.discover = function (seconds, successCallback, failureCallback) {
@@ -76,5 +80,6 @@ rfduino.onData = function () {
     return promise;
 };
 
+window.plugins['rfduino'] = rfduino;
 
 window.rfduino = rfduino;
